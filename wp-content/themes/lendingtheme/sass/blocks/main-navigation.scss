@@ -1,0 +1,86 @@
+/* main-navigation.scss */
+
+.main-navigation {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #6e9cc3;
+  & li {
+    & a {
+      color: #fff;
+  	  padding: 15px 10px;
+  	  text-decoration: none;
+  	  text-align: center;
+    }
+    &:hover {
+      background: #5c8db7;
+    }
+  }
+}
+
+@media ($tablet) {
+  .main-navigation {
+      & div ul[aria-expanded=true] {
+        display: flex;
+        flex-direction: column;
+      }
+      position: relative;
+      &__menu-toggle[aria-expanded=true] {
+
+        @include toggleOn();
+
+        & span { display: none; }
+        & label {
+
+          &::before {
+
+            @include backgroundToggleOn();
+
+          }
+
+        }
+        &::before, &::after {
+
+          @include lineToggleOn();
+
+          transform: rotate(45deg);
+        }
+        &::after {
+
+          transform: rotate(-45deg);
+
+        }
+      }
+      &__menu-toggle[aria-expanded=false] {
+
+        @include toggleOff();
+
+        & span { display: none; }
+        & label {
+
+          &::before {
+
+            @include firstLineToggleOff();
+
+          }
+          &::after {
+
+            @include secondLineToggleOff();
+
+          }
+        }
+        &::before {
+
+          @include backgroundToggleOff();
+
+        }
+        &::after {
+
+          @include thirthLineToggleOff();
+
+        }
+      }
+  }
+}

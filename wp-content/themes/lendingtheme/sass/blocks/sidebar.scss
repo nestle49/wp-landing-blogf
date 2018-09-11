@@ -1,0 +1,18 @@
+/* sidebar.scss */
+
+.sidebar {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 30px 30px 30px;
+
+}
+
+@media ($tablet) {
+  .sidebar {}
+}
+
+@media ($phone) {
+  .sidebar {}
+}

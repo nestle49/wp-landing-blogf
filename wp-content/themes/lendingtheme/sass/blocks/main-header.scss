@@ -1,0 +1,79 @@
+/* main-header.scss */
+
+.main-header {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__social {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media ($tablet) {
+  .main-header {
+
+  }
+}
+
+@media ($phone) {
+  .main-header {
+    &__social {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.site-branding {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &__site-description {
+    max-width: 25%;
+    margin:auto 0;
+  }
+}
+
+@media ($phone) {
+  .site-branding {
+    flex-direction: column;
+    justify-content: space-around;
+    &__site-description {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.social {
+  &__item {
+    width: 40px;
+    height: 40px;
+    &:hover {
+      box-shadow: 0 0 6px rgba(0,0,0,0.8);
+    }
+    &--vk {
+      background: url("images/social.png");
+    }
+    &--fb {
+      background: url("images/social.png") -40px 0;
+      margin-left: 1px;
+    }
+    &--tw {
+      background: url("images/social.png") -78px 0;
+      margin-left: 1px;
+    }
+  }
+}
+
+/* Переопределение базовой */
+.custom-logo-link {
+	height: 80px;
+  width: 80px;
+}

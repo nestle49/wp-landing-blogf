@@ -1,0 +1,20 @@
+/* content-area.scss */
+
+.content-area {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media ($tablet) {
+  .content-area {
+    flex-direction: column;
+  }
+}
+
+@media ($phone) {
+  .content-area {
+
+  }
+}

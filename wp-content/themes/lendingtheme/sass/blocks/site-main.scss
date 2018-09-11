@@ -1,0 +1,26 @@
+/* site-main.scss */
+
+.site-main {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  & article {
+    margin: 30px 30px 10px 30px;
+    & footer span {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media ($tablet) {
+  .site-main {
+    flex-direction: column;
+  }
+}
+
+@media ($phone) {
+  .site-main {
+
+  }
+}
